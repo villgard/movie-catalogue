@@ -1,0 +1,108 @@
+<template>
+  <div :class="$style.container">
+    <div :class="$style.side">
+      <div :class="$style.poster">
+        <slot name="poster" />
+      </div>
+      <ul :class="$style.stats">
+        <li :class="$style.item">
+          <slot name="rating" />
+        </li>
+        <li :class="$style.item">
+          <slot name="year" />
+        </li>
+        <li :class="$style.item">
+          <slot name="genres" />
+        </li>
+        <li :class="$style.item">
+          <slot name="countries" />
+        </li>
+        <li :class="$style.item">
+          <slot name="duration" />
+        </li>
+      </ul>
+    </div>
+    <div :class="$style.content">
+      <h1 :class="$style.title">
+        <slot name="title" />
+      </h1>
+      <p :class="$style.description">
+        <slot name="description" />
+      </p>
+      <div :class="$style.actions">
+        <slot name="actions" />
+      </div>
+      <div :class="$style.about">
+        <slot name="about" />
+        <ul :class="$style.list">
+          <slot name="information" />
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup></script>
+
+<style lang="scss" module>
+.container {
+  width: 100%;
+  display: flex;
+  column-gap: 30px;
+}
+
+.content {
+  max-width: 600px;
+  width: 100%;
+}
+
+.stats {
+  margin: 10px 0;
+}
+
+.trailer {
+  width: 100%;
+  height: 480px;
+}
+
+.poster {
+  width: 320px;
+}
+
+.item {
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 5px;
+  span {
+    font-weight: 400;
+    margin-right: 4px;
+  }
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  column-gap: 10px;
+}
+
+.about {
+  margin: 20px 0;
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.list {
+
+}
+</style>
