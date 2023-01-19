@@ -22,11 +22,8 @@
         </li>
       </ul>
       <p :class="$style.description">
-        <span>
-          <slot name="description" />
-        </span>
+        <slot name="description" />
       </p>
-      <div :class="$style.blackout" />
     </div>
   </li>
 </template>
@@ -97,7 +94,11 @@ defineProps({
 }
 
 .description {
+  overflow: hidden;
   font-size: 13px;
   line-height: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 11;
+  -webkit-box-orient: vertical;
 }
 </style>

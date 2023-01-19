@@ -1,4 +1,4 @@
-import { Film } from "../films";
+import { Film } from '../films';
 
 export interface FilmsApiResponse<T> {
   current_page: number;

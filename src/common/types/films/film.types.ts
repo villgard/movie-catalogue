@@ -4,7 +4,7 @@ interface Profession {
   profession_id: string;
 }
 
-interface Person {
+export interface Person {
   id: number;
   name_english: string;
   name_russian: string;
@@ -56,7 +56,7 @@ export interface Film {
   player: string;
   small_poster: string;
   big_poster: string;
-  persons: Person;
-  genres: Genre;
-  countries: Country;
+  persons: Person[];
+  genres: Genre[];
+  countries: Country[];
 }
