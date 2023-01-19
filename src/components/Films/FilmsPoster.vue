@@ -1,21 +1,21 @@
 <template>
   <div :class="$style.poster">
-    <img :src="poster" :alt="title" />
+    <img v-if="poster" :src="poster" :alt="title" />
+    <img v-else src="/image/no-poster.jpg" :alt="title" />
   </div>
 </template>
 
 <script lang="ts" setup>
 defineProps({
-  poster: {
-    type: String,
-    default: '/image/no-poster.jpg',
-  },
+  poster: String,
   title: String,
 });
 </script>
 
 <style lang="scss" module>
 .poster {
+  max-width: 100%;
+  max-height: 100%;
   width: 100%;
   height: 100%;
 }

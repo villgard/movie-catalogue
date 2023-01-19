@@ -49,15 +49,36 @@
   width: 100%;
   display: flex;
   column-gap: 30px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 690px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.side {
+  @media screen and (max-width: 690px) {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .content {
   max-width: 600px;
   width: 100%;
+  @media screen and (max-width: 690px) {
+    max-width: 100%;
+  }
 }
 
 .stats {
   margin: 10px 0;
+  @media screen and (max-width: 690px) {
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 425px) {
+    margin-left: 0;
+  }
 }
 
 .trailer {
@@ -67,6 +88,9 @@
 
 .poster {
   width: 320px;
+  @media screen and (max-width: 425px) {
+    width: 100%;
+  }
 }
 
 .item {
@@ -82,17 +106,26 @@
 
 .title {
   margin-bottom: 15px;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .description {
   font-size: 14px;
   line-height: 1.2;
   margin-bottom: 10px;
+  @media screen and (max-width: 690px) {
+    text-align: justify;
+  }
 }
 
 .actions {
   display: flex;
   column-gap: 10px;
+  @media screen and (max-width: 690px) {
+    justify-content: space-around;
+  }
 }
 
 .about {
@@ -103,6 +136,8 @@
 }
 
 .list {
-
+  li {
+    font-weight: 600;
+  }
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <footer :class="$style.footer">
-    {{ new Date().getFullYear() }}
+    <div :class="$style.container">
+      {{ new Date().getFullYear() }}
+    </div>
   </footer>
 </template>
 
@@ -14,5 +16,11 @@
   background-color: #1a1a1a;
   color: #fafafa;
   padding: 10px 15px;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 </style>
