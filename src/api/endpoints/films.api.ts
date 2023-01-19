@@ -1,5 +1,5 @@
-import axios from "axios";
-import { FilmsApiFetchFilmResponse, FilmsApiFetchFilmsResponse } from "../../common/types";
+import axios from 'axios';
+import { FilmsApiFetchFilmResponse, FilmsApiFetchFilmsResponse } from '../../common/types';
 
 export class FilmsApi {
   fetchFilms(page: number) {

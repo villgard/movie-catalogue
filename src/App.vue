@@ -8,5 +8,4 @@
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
