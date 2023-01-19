@@ -4,7 +4,6 @@ import vue from '@vitejs/plugin-vue';
 import svgLoader from 'vite-svg-loader';
 import vueTypeImports from 'vite-plugin-vue-type-imports';
 
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -20,4 +19,4 @@ export default defineConfig({
       '~': fileURLToPath(new URL('./', import.meta.url)),
     },
   },
-})
+});
