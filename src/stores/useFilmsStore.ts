@@ -4,20 +4,23 @@ import { Film, FilmsApiFetchFilmsResponse } from '@/common/types';
 import useApi from '../hooks/useApi';
 
 export const useFilmsStore = defineStore('films', () => {
-  const filmsList = ref(null);
-  const film = ref(null);
+  const film = ref<Film>(null);
   const api = useApi();
+  const loading = ref<boolean>(false);
 
   async function fetchFilms(page: number): Promise<FilmsApiFetchFilmsResponse | []> {
+    loading.value = true;
+
     return await api.films
       .fetchFilms(page)
       .then((response) => {
-        filmsList.value = [...response.data.data];
+        loading.value = false;
 
         return response.data;
       })
       .catch((error) => {
         console.error(error);
+        loading.value = false;
 
         return [];
       });
@@ -32,8 +35,8 @@ export const useFilmsStore = defineStore('films', () => {
   }
 
   return {
-    filmsList,
     film,
+    loading,
     fetchFilms,
     fetchFilm,
   };
