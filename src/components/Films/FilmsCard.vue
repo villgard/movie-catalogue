@@ -48,7 +48,7 @@ const focusOnCard = ref(false);
 
 <style lang="scss" module>
 .link {
-  width: calc(20% - 20px);
+  width: calc(20% - 40px);
   min-width: 203px;
   max-height: 304px;
   border-radius: 5px;
@@ -56,5 +56,14 @@ const focusOnCard = ref(false);
   background: #4d4d55;
   cursor: pointer;
   text-decoration: none;
+  @media screen and (max-width: 520px) {
+    min-width: 160px;
+    width: calc(50% - 36px);
+    margin: 0 8px 20px;
+    max-height: 100%;
+  }
+  @media screen and (max-width: 380px) {
+    width: 100%;
+  }
 }
 </style>

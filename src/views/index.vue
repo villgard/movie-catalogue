@@ -39,6 +39,7 @@ onMounted(async () => {
 .list {
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 0;
 }

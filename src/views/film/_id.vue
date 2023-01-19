@@ -52,7 +52,7 @@
       <li v-if="directors.length" :class="$style.item">
         Режиссёры:
         <span v-for="item in directors" :key="item.id">
-          <a :href="personalLink(item.kinopoisk_id)" :class="$style.infoLink">
+          <a :href="personalLink(item.kinopoisk_id)" :class="$style.infoLink" target="_blank">
             {{ item.name_russian }}
           </a>
         </span>
@@ -60,7 +60,7 @@
       <li :class="$style.item">
         Продюсеры:
         <span v-for="item in producers" :key="item.id">
-          <a :href="personalLink(item.kinopoisk_id)" :class="$style.infoLink">
+          <a :href="personalLink(item.kinopoisk_id)" :class="$style.infoLink" target="_blank">
             {{ item.name_russian }}
           </a>
         </span>
@@ -68,7 +68,7 @@
       <li :class="$style.item">
         Актеры:
         <span v-for="item in actors" :key="item.id">
-          <a :href="personalLink(item.kinopoisk_id)" :class="$style.infoLink">
+          <a :href="personalLink(item.kinopoisk_id)" :class="$style.infoLink" target="_blank">
             {{ item.name_russian }}
           </a>
         </span>
@@ -144,7 +144,6 @@ onMounted(async () => {
 .orange {
   background-color: #f50;
 }
-
 
 .item {
   margin-bottom: 10px;
