@@ -40,6 +40,7 @@ import FilmsPoster from '@/components/Films/FilmsPoster.vue';
 defineProps({
   film: {
     type: Object as PropType<Film>,
+    required: true,
   },
 });
 
@@ -48,6 +49,8 @@ const focusOnCard = ref(false);
 
 <style lang="scss" module>
 .link {
+  // Решение интересное, но лучше использовать max-width, а для отступов gap (чтобы убрать лишний марджин по краям)
+  // Вообще лучше использовать calc() как можно реже
   width: calc(20% - 40px);
   min-width: 203px;
   max-height: 304px;

@@ -12,6 +12,7 @@ export interface FilmsApiResponse<T> {
   to: number;
 }
 
+// Generic точно верный? У тебя получится FilmsApiResponse.data.data, что выглядит странно
 export type FilmsApiFetchFilmsResponse = FilmsApiResponse<{ data: Film[] }>;
 
 export type FilmsApiFetchFilmResponse = Film;

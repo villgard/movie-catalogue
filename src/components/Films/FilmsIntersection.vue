@@ -12,6 +12,7 @@ const emit = defineEmits<{
 
 const intersectionRef = ref(null);
 
+// Круто, но нужно настроить процент доступности чтобы этот метод вызвался заранее
 useIntersectionObserver(intersectionRef, ([{ isIntersecting }]) => {
   if (isIntersecting) {
     emit('loadMore');
