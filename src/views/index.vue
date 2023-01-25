@@ -1,4 +1,5 @@
 <template>
+  <!-- В ul могут лежать только li -->
   <ul :class="$style.list">
     <FilmsCard v-for="film in filmsList" :key="film.id" :film="film" />
     <FilmsIntersection v-if="!loading" @loadMore="fetchMoreFilms" />
@@ -22,6 +23,7 @@ const counter = ref<number>(1);
 async function fetchFilmsList(): Promise<void> {
   const response = await fetchFilms(counter.value);
 
+  // Будет ошибка в случае если придёт массив (в массив попадёт undefined)
   filmsList.value.push(...response.data);
   counter.value++;
 }
